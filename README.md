@@ -138,12 +138,18 @@ Then recompile with `gh aw compile`.
 - Bot-triggered events are automatically skipped to prevent loops
 - Concurrency control ensures only one analysis runs per issue at a time
 
-## File Structure
+## Repository Structure
+
+This repository hosts agentic workflow definitions for use with `gh aw add`:
 
 ```
-.github/workflows/
-├── issue-analyzer.md         # Agentic workflow source (edit this)
-└── issue-analyzer.lock.yml   # Compiled GitHub Actions workflow (auto-generated)
+workflows/
+└── issue-analyzer.md         # Agentic workflow source
+
+# In your TARGET repo after `gh aw add`, you'll see:
+# .github/workflows/
+# ├── issue-analyzer.md         # Copied workflow source
+# └── issue-analyzer.lock.yml   # Compiled GitHub Actions workflow
 ```
 
 ## Troubleshooting
