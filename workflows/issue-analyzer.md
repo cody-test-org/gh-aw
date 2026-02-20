@@ -4,7 +4,7 @@ on:
   issues:
     types: [opened, edited]
   skip-bots: [github-actions, copilot, dependabot]
-roles: all
+  roles: all
 engine: copilot
 permissions: read-all
 safe-outputs:
